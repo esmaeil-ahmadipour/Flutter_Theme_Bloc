@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterthemebloc/pages/home_page.dart';
+import 'package:flutterthemebloc/ui/pages/home/home_page.dart';
 
 void main() => runApp(App());
 
