@@ -6,6 +6,8 @@ import 'package:flutterthemebloc/ui/pages/home/home_page.dart';
 void main() => runApp(App());
 
 class App extends StatelessWidget {
+  final String title = 'Material Theme';
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -17,12 +19,10 @@ class App extends StatelessWidget {
   }
 
   Widget _buildWithTheme(BuildContext context, ThemeState state) {
-        return MaterialApp(
-          title: 'Flutter Demo',
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-          ),
-          home: HomePage(title: 'Flutter Demo Home Page'),
-        );
-      }
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: state.themeData,
+      home: HomePage(title: title),
+    );
+  }
 }
